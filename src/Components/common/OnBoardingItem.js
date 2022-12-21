@@ -28,16 +28,17 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     title:{
-        fontFamily:'SF Pro Rounded',
+        fontFamily:'FontsFree-Net-SF-Pro-Rounded-Regular',
         fontWeight:'500',
-        fontSize:18,
+        fontSize:20,
         color:'#000000',
         textAlign:'center',
+        lineHeight:21,
         paddingHorizontal:15,
         paddingVertical:30
     },
     desc:{
-        // fontFamily:'SF Pro Rounded',
+        fontFamily:'FontsFree-Net-SF-Pro-Rounded-Regular',
         fontWeight:'500',
         textAlign:'center',
         color:'#000000',

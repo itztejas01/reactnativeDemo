@@ -4,7 +4,7 @@ import data from '../data';
 import {NextButton, OnBoardingItem,Paginator} from './common';
 
 
-function OnBoarding() {
+function OnBoarding({navigation}) {
     const [currentIndex,setCurrentIndex] = useState(0)
     const scrollX = useRef(new Animated.Value(0)).current
 
@@ -16,10 +16,11 @@ function OnBoarding() {
 
     const viewChange = useRef(({viewAreaCoveragePercentThreshold:50})).current;
 
-    const navigate = () => {
-
+    const navigate = () => {      
+      navigation.replace('HomeScreen')
+      
     }
-    // console.log('currentIndex',currentIndex,currentIndex == data.length-1);
+    
   return (
     <View style={styles.container}>
         <View style={{flex:3}}>
@@ -51,7 +52,7 @@ function OnBoarding() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#E5E5E5',
+    backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
   },

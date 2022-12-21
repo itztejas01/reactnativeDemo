@@ -5,6 +5,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import SplashScreen from '../Components/SplashScreen';
+import OnBoarding from '../Components/OnBoarding'
+import HomeScreen from '../Components/HomeScreen'
 
 
 
@@ -21,14 +23,15 @@ function MainAppRoutes(){
             <MainStack.Navigator screenOptions={{
                 headerShown:false,
             }}>
-                <MainStack.Screen name='Splash Screen' component={SplashScreen} options={{
+                <MainStack.Screen name='Splash Screen' component={SplashScreen} />
+                <MainStack.Screen name='OnBoarding' component={OnBoarding}  />
+                <MainStack.Screen name='HomeScreen' component={HomeScreen} options={{
                     headerShown:false,
                 }} />
-                {/* <MainStack.Screen name='OnBoarding' component={OnBoarding} options={{
-                    headerShown:false,
-                }} /> */}
                 {/* <MainStack.Screen name='HomeScreen' component={tabStack} /> */}
             </MainStack.Navigator>
         </NavigationContainer>
     )
 }
+
+export default MainAppRoutes
