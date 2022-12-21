@@ -61,6 +61,10 @@ export default function HomeScreen() {
             renderItem={({item})=>(
                 <View style={styles.slideView}>
                 <Image style={styles.slideImage} source={item.image} />
+                <View style={styles.timeBox}>
+
+                <Text style={styles.timeText}>{item.time}</Text>
+                </View>
                 </View>
             )}
             showsHorizontalScrollIndicator={false}
@@ -86,7 +90,7 @@ const styles = StyleSheet.create({
 
     },
     greetingText:{
-        fontFamily:'SF Pro Rounded',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontWeight:'700',
         fontStyle:'normal',
         fontSize:34,
@@ -95,7 +99,7 @@ const styles = StyleSheet.create({
         marginHorizontal:15
     },
     welcomeText:{
-        fontFamily:'SF Pro Rounded',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontWeight:'500',
         fontStyle:'normal',
         fontSize:18,
@@ -138,14 +142,14 @@ const styles = StyleSheet.create({
     posterText:{
         color:'#000000',
         fontWeight:'700',
-        fontFamily:'SF Pro Rounded',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontStyle:'normal',
         textAlign:'center',
         marginVertical:10
     },
     navigateText:{
         fontWeight:'700',
-        fontFamily:'SF Pro Rounded',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontStyle:'normal',
         fontSize:20,
         color:'#000000',
@@ -163,5 +167,24 @@ const styles = StyleSheet.create({
         borderRadius:10,
         
         height:200,
+    },
+    timeBox:{
+        position:'absolute',
+        borderRadius:2,
+        width:'35%',
+        height:25,
+        justifyContent:'center',
+        backgroundColor:'#49A6FC',
+        bottom:10,
+        left:10
+    },
+    timeText:{
+        fontWeight:'700',
+        fontFamily:'SF-Pro-Rounded-Regular',
+        fontStyle:'normal',
+        fontSize:14,
+        color:'#FFFFFF',
+        textAlign:'center',
+        textAlignVertical:'center'
     }
 })

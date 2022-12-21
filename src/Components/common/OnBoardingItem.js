@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
         justifyContent:'center'
     },
     title:{
-        fontFamily:'FontsFree-Net-SF-Pro-Rounded-Regular',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontWeight:'500',
         fontSize:20,
         color:'#000000',
@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
         paddingVertical:30
     },
     desc:{
-        fontFamily:'FontsFree-Net-SF-Pro-Rounded-Regular',
+        fontFamily:'SF-Pro-Rounded-Regular',
         fontWeight:'500',
         textAlign:'center',
         color:'#000000',

@@ -24,8 +24,7 @@ function BottomTabNavigator(){
         }}>
             <Tab.Screen name='Home' component={HomeScreen}  options={{
                 
-                tabBarIcon:({color,focused,size})=>{
-                    console.log('tintColor',color,focused);
+                tabBarIcon:({color,focused,size})=>{                    
                     return (
                     <Image source={require('../assets/images/VectorStack.png')} style={focused ? {opacity:1} : {opacity:0.5}} />
                 )
