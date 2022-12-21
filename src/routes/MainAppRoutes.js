@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Text, TouchableOpacity } from 'react-native'
+import { Image, Text, TouchableOpacity } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
@@ -16,6 +16,30 @@ const MainStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
 
 
+function BottomTabNavigator(){
+    return(
+        <Tab.Navigator screenOptions={{
+            tabBarShowLabel:false,
+            headerShown:false
+        }}>
+            <Tab.Screen name='Home' component={HomeScreen}  options={{
+                
+                tabBarIcon:({color,focused,size})=>{
+                    console.log('tintColor',color,focused);
+                    return (
+                    <Image source={require('../assets/images/VectorStack.png')} style={focused ? {opacity:1} : {opacity:0.5}} />
+                )
+            }
+            }} />
+            <Tab.Screen name='Setting' component={OnBoarding} options={{
+                tabBarIcon:({color,focused,size})=>(
+                    <Image source={require('../assets/images/setting.png')} style={focused ? {opacity:1} : {opacity:0.5}}  />
+                )
+            }} />
+        </Tab.Navigator>
+    )
+}
+
 
 function MainAppRoutes(){
     return(
@@ -25,7 +49,7 @@ function MainAppRoutes(){
             }}>
                 <MainStack.Screen name='Splash Screen' component={SplashScreen} />
                 <MainStack.Screen name='OnBoarding' component={OnBoarding}  />
-                <MainStack.Screen name='HomeScreen' component={HomeScreen} options={{
+                <MainStack.Screen name='HomeScreen' component={BottomTabNavigator} options={{
                     headerShown:false,
                 }} />
                 {/* <MainStack.Screen name='HomeScreen' component={tabStack} /> */}
